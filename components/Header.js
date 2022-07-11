@@ -7,31 +7,35 @@ export default function Header({ title }) {
   function checkLink(url, name) {
     if (url == asPath) {
       return (
-        <Link href={url}>
-          <a class="fw-bold text-white text-decoration-none">{name}</a>
-        </Link>
+        <li class="list-group-item bg-primary bg-gradient border-primary">
+          <Link href={url}>
+            <a class="fw-bold text-white text-decoration-none">{name}</a>
+          </Link>
+        </li>
       );
     } else {
       return (
-        <Link href={url}>
-          <a class="text-white text-decoration-none">{name}</a>
-        </Link>
+        <li class="list-group-item bg-dark bg-gradient border-secondary">
+          <Link href={url}>
+            <a class="text-white text-decoration-none">{name}</a>
+          </Link>
+        </li>
       );
     }
   }
 
   return (
     <>
-      <h1 class="mt-5 title">
+      <h1 class="mt-5 fw-bold display-3">
         <Link href="/">
           <a class="text-white text-decoration-none">{title}</a>
         </Link>
       </h1>
       <nav>
-        <ul>
-          <li>{checkLink('/upcoming', 'Upcoming')}</li>
-          <li>Resources</li>
-          <li>FAQ</li>
+        <ul class="list-group list-group-horizontal border-secondary">
+          {checkLink('/upcoming', 'Upcoming')}
+          {checkLink('/resources', 'Resources')}
+          {checkLink('/faq', 'FAQ')}
         </ul>
       </nav>
     </>
