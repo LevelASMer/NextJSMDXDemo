@@ -1,15 +1,17 @@
-import styles from './Footer.module.css';
-
 export default function Footer() {
+  const date = new Date().getFullYear();
   return (
     <>
-      <footer className={styles.footer}>
-        <p>
-          As we hope our work (and the even harder work of others) will one day
-          no longer be needed, we ask for the implementation of proper roadmaps
-          and release calendars on every official survey. To support us, please
-          consider doing the same. - SYP Team
-        </p>
+      <footer class="d-flex flex-column align-items-center py-5">
+        <div>
+          <a href="https://twitter.com/SaveYourPrimos">
+            <i class="fs-2 p-1 text-white-50 fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://discord.gg/SaveYourPrimos">
+            <i class="fs-2 p-1 text-white-50 fa-brands fa-discord"></i>
+          </a>
+        </div>
+        <div class="text-white-50">&copy;{date} SaveYourPrimos</div>
       </footer>
     </>
   );
