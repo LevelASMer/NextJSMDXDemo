@@ -4,14 +4,17 @@ export default function Question(props) {
   return (
     <>
       <FAQ />
-      <div class="mb-2">
-        <a class="btn btn-primary" href="https://saveyourprimos.tumblr.com/ask">
+      <div className="mb-2">
+        <a
+          className="btn btn-primary"
+          href="https://saveyourprimos.tumblr.com/ask"
+        >
           Ask A Question
         </a>
       </div>
       <div>
         <a
-          class="btn btn-primary"
+          className="btn btn-primary"
           href="https://saveyourprimos.tumblr.com/submit"
         >
           Submit Media
